@@ -14,7 +14,7 @@ This is the **EDA App** created in Streamlit using the **pandas-profiling** libr
 # Upload CSV data
 with st.sidebar.header('1. Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
-    example_csv_url = "https://raw.githubusercontent.com/torrwill/data/master/car_price_assignment.csv"
+    example_csv_url = "https://raw.githubusercontent.com/torrwill/eda_streamlit/main/CarPrice_Assignment.csv"
     st.sidebar.markdown(f"[Example CSV input file]({example_csv_url})")
 
 # Pandas Profiling Report
