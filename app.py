@@ -7,7 +7,11 @@ from streamlit_pandas_profiling import st_profile_report
 # Web App Title
 st.markdown('''
 # **The EDA App**
+            
 This is the **EDA App** created in Streamlit using the **pandas-profiling** library.
+
+**Credit:** App built in `Python` + `Streamlit` by [Will Torres](https://linkedin.com/in/torreswill)
+
 ---
 ''')
 
@@ -37,10 +41,7 @@ else:
     if button_label:
         @st.cache_data
         def load_data():
-            a = pd.DataFrame(
-                np.random.rand(100, 5),
-                columns=['a', 'b', 'c', 'd', 'e']
-            )
+            a = pd.read_csv(example_csv_url, index_col=0)
             return a
 
         df = load_data()
